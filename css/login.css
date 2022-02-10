@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #437995, #62B184);
+}
+
+h1 {
+    width: 100%;
+    font-size: 5.5rem;
+    color: #555555;
+}
+
+.form-body {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+    background-color: azure;
+    padding: 20px 0px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 8px 10px #16413f;
+}
+
+.form-group {
+    margin-bottom: 50px;
+}
+
+input[type=text], input[type=password] {
+    width: 430px;
+    border: none;
+    border-bottom: 1px solid #808080;
+    font-size: 1rem;
+    opacity: 0.5;
+    background-size:20px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 40px;
+}
+
+input[type=text] {
+    background-image: url('../img/user.png');
+}
+
+input[type=password] {
+    background-image: url('../img/lock.png');    
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    outline: none;
+    opacity: 0.8;
+}
+
+.form-check {
+    margin-right: 250px;
+    opacity: 0.8;
+}
+
+.form-check-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.form-check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 45px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}  
+
+.form-check-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.form-check-container input:checked ~ .checkmark {
+    background-image: linear-gradient(to right, #437995, #62B184);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.form-check-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.form-check-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn {
+    background-image: linear-gradient(to right, #437995, #62B184);
+    color: white;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 500px;
+    opacity: 0.9;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn:active {
+    opacity: 0.4;
+}
+
+.form-buttom {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.link {
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+
+.form-buttom .link a:link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-buttom .link a:link:hover {
+    opacity: 0.5;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer-logo {
+    position: relative;
+    top: 80px;
+    bottom: 40px;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: 50px;
+    opacity: 0.7;
+}
+
+.footer-logo img:hover {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 500px) {  
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    input[type=text], input[type=password] {
+        width: 200px;
+    }
+
+    .form-check {
+        margin-right: 40px;
+    }
+    
+    .btn {
+        width: 300px;
+    }
+    
+    .footer-logo {
+        position: relative;
+        top: 50px;
+    }
+    
+    .footer-logo img {
+        width: 100px;
+        height: 50px;
+    }
+}
