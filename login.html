@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/login.js"></script>
     <title>Login Page</title>
 </head>
+
 <body>
     <div class="form-body">
-        <h1>Willkommen</h1>
-        <form>
+        <!-- Header -->
+        <h1 id="formHeader" class="form-header">Willkommen</h1>
+        <!-- Header If Form failed -->
+        <div id="formWrong" class="form-wrong">
+            <div class="error-header">Login fehlgeschlagen</div>
+            <div class="error-text">
+                <div>Ihr Username oder Ihr Passwort sind nicht korrekt.</div>
+                <div>Bitte Versuchen Sie es erneut</div>
+            </div> 
+        </div>
+        <!-- Form -->
+        <form name="myForm" onsubmit="return validateForm()">
             <div class="form-row">
+                <!-- Input-Text -->
                 <div class="form-group">
-                    <input type="text" class="" id="" placeholder="Username">
+                    <input type="text" name="uname" id="inputText" class="input-text" placeholder="Username">
+                    <div class="form-failed" id="nameFailed"></div>
                 </div>
+                <!-- Input-password -->
                 <div class="form-group">
-                    <input type="password" class="" id="exampleInputPassword3" placeholder="Passwort">
+                    <input type="password" name="pass" id="inputPass" class="input-pass" placeholder="Passwort">
+                    <div class="form-failed" id="passFailed"></div>
                 </div>
+                <!-- Input-checkbox -->
                 <div class="form-group">
                     <div class="form-check">
                         <label class="form-check-container"> Angemeldet bleiben
@@ -27,20 +45,23 @@
                     </div>
                 </div>
             </div>
+            <!-- Submit Button -->
             <div class="form-row">
                 <button type="submit" class="btn">Login</button>        
             </div>
         </form>
+        <!-- Form-Footer -->
         <div class="form-buttom">
             <div class="link"><a href="#">Password vergessen?</a></div>
-            <div class="link"> Noch keinen Account? <a href="#">Benutzerzugang anfordern.</a></div>
+            <div class="link"> Noch keinen Account? <a href="#" class="href">Benutzerzugang anfordern.</a></div>
         </div>
     </div>
+    <!-- Logo -->
     <footer class="footer">
         <div class="footer-logo">
-            <img src="./img/INDEC_GOBENCH_Logo.png" alt="Gobench-Logo">
-            <!-- Logo -->
+            <img src="./img/MicrosoftTeams-image.png" alt="Gobench-Logo">
         </div>
     </footer>
 </body>
+
 </html>
