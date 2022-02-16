@@ -1,45 +1,54 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font: normal normal normal 20px/23px Arial;
     color: #555555;
     background-image: linear-gradient(to right, #437995, #62B184);
 }
 
 .form-header {
     width: 100%;
-    margin: 16% 0px;
-    font-size: 5.5rem;
+    height: 300px;
+    /* height: 100px; */
+    /* margin: 16% 0px; */
+    /* font-size: 3rem; */
+    font: normal normal bold 90px/103px Arial;
     color: #555555;
+    position: relative;
+    top: 100px;
 }
 
 .form-wrong {
     display: none;
-    margin-bottom: 90px;
+    font-size: 20px;
+    margin-bottom: 190px;
+    position: relative;
+    top: 100px;
 }
 
 .error-header {
     font: normal normal bold 20px/23px Arial;
     margin-bottom: 20px;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     color: #4469B1;
 }
 
 .form-failed {
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-top: 5px;
+    margin-left: 100px;
     text-align: left;
     color: red;
 }
 
 .form-body {
-    max-width: 600px;
+    width: 610px;
+    height: 841px;
     margin: auto;
-    margin-top: 2%;
+    /* margin-top: 2%; */
+    margin-top: 49px;
     text-align: center;
-    background-color: azure;
-    padding: 20px 0px;
+    background-color: white;
+    /* padding: 20px 0px; */
     border-radius: 5px;
-    box-shadow: 5px 10px 8px 10px #16413f;
+    /* box-shadow: 5px 10px 8px 10px #16413f; */
 }
 
 .form-group {
@@ -47,17 +56,24 @@ body {
 }
 
 input[type=text], input[type=password] {
-    width: 430px;
+    width: 349px;
     border: none;  
-    background-color: azure;
+    background-color: white;
     border-bottom: 2px solid #808080;
-    font-size: 1rem;
-    opacity: 0.5;
-    background-size:20px;
-    background-position: 10px 10px; 
+    font: normal normal normal 23px/27px Arial;
+    opacity: 0.6;
+    color: #B4B4B4;
+    background-size:25px;
+    background-position: 5px 10px; 
     background-repeat: no-repeat;
-    padding: 12px 40px;
+    padding: 10px 40px;
 }
+
+/* .input-text::-webkit-input-placeholder,
+.input-pass::-webkit-input-placeholder  {
+    position: relative;
+    left: 40px;
+} */
 
 input[type=text] {
     background-image: url('../img/user.png');
@@ -70,7 +86,7 @@ input[type=password] {
 input[type=text]:focus,
 input[type=password]:focus {
     outline: none;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .input-failed::-webkit-input-placeholder {
@@ -78,13 +94,16 @@ input[type=password]:focus {
 }
 
 .form-check {
-    margin-right: 250px;
-    opacity: 0.8;
+    margin-right: 200px;
+    font: normal normal normal 23px/27px Arial;
+    color: #555555;
+    /* opacity: 0.8; */
 }
 
 .form-check-container {
     display: block;
     position: relative;
+    margin-left: 50px;
     margin-bottom: 12px;
     cursor: pointer;
     -webkit-user-select: none;
@@ -141,44 +160,53 @@ input[type=password]:focus {
 }
 
 .btn {
-    background-image: linear-gradient(to right, #437995, #62B184);
+    background: linear-gradient(to right, #437995, #62B184);
+    background-color: #62B184;
     color: white;
-    padding: 20px;
-    font-size: 1rem;
-    font-weight: bold;
+    /* padding: 20px; */
+    font: normal normal bold 25px/29px Arial;
+    /* font-weight: bold; */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 500px;
+    width: 429px;
+    height: 72px;
     opacity: 0.9;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+    transition: background 1s linear;
+    transition-timing-function: cubic-bezier(0.42,0,0.58,1);
 }
 
 .btn:hover {
-    opacity: 0.7;
+    background: #437995;
+    /* transition: background .3s ease-in-out; */
 }
 
-.btn:active {
+/* .btn:active {
     opacity: 0.4;
-}
+} */
 
 .form-buttom {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    font-size: 20px;
+    color: #555555;
 }
 
 .link {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-buttom .link a:link {
     text-decoration: none;
-    color: black;
-    font-weight: bold;
     cursor: pointer;
 }
 
+.form-buttom .link a:link span {
+    font-weight: bold;
+}
+
 .form-buttom .link a:link:hover {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .footer {
@@ -187,8 +215,7 @@ input[type=password]:focus {
 
 .footer-logo {
     position: relative;
-    top: 80px;
-    bottom: 40px;
+    top: 90px;
 }
 
 .footer-logo img {
@@ -221,9 +248,9 @@ input[type=password]:focus {
         width: 200px;
     }
 
-    .form-check {
+    /* .form-check {
         margin-right: 40px;
-    }
+    } */
     
     .btn {
         width: 300px;

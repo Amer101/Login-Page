@@ -13,7 +13,7 @@ const validateForm = () => {
                     document.getElementById("nameFailed").innerHTML = "Geben Sie bitte Ihren Benutzername ein";
                     document.getElementById("inputText").style.cssText = `
                         border-bottom: 2px solid red;
-                        background-image: url('../img/warning.png');
+                        background-image: url('../img/exclamation.png');
                         opacity: 1;
                         `;
                     document.getElementById("inputText").classList.add("input-failed");
@@ -22,11 +22,14 @@ const validateForm = () => {
                     document.getElementById("passFailed").innerHTML = "Geben Sie bitte Ihr Passwort ein";
                     document.getElementById("inputPass").style.cssText = `
                         border-bottom: 2px solid red;
-                        background-image: url('../img/warning.png');
+                        background-image: url('../img/exclamation.png');
                         opacity: 1;
                         `;
                     document.getElementById("inputPass").classList.add("input-failed");
-                } 
+                }
+                if (x == "" && y == "") {
+                    document.querySelector('.form-header').style.height = "260px";
+                }
             }
         )
 
@@ -36,12 +39,10 @@ const validateForm = () => {
         document.getElementById("formWrong").style.display = "block";
         document.getElementById("inputText").style.cssText = `
                 border-bottom: 2px solid #4469B1;
-                background-image: url('../img/user-wrong.png');
                 opacity: 1;
                 `;
         document.getElementById("inputPass").style.cssText = `
                 border-bottom: 2px solid #4469B1;
-                background-image: url('../img/lock-wrong.png');
                 opacity: 1;
                 `;
         document.querySelector("#nameFailed").style.display = "none";
