@@ -20,10 +20,8 @@ body {
 .form-header {
     width: 100%;
     height: 290px;
-    font: normal normal bold 90px/103px Arial;
+    font: normal normal bold 90px/290px Arial;
     color: #555555;
-    position: relative;
-    top: 100px;
 }
 
 /*If Submit with wrong Username||Password*/
@@ -217,7 +215,7 @@ input[type=password]:focus {
     opacity: 0.7;
 }
 
-/*for width<360px*/
+/*for width<630px*/
 
 @media only screen and (max-width: 630px) {  
 
@@ -226,7 +224,7 @@ input[type=password]:focus {
     }
 
     .form-header {
-        font: normal normal bold 75px/100px Arial;
+        font: normal normal bold 75px/220px Arial;
     }
 
     input[type=text], input[type=password] {
@@ -269,7 +267,7 @@ input[type=password]:focus {
     }
     .form-header {
         height: 220px;
-        top: 55px;
+        font: normal normal bold 90px/220px Arial;
     }
     .footer-logo {
         top: 45px;
@@ -278,5 +276,14 @@ input[type=password]:focus {
         margin-bottom: 150px;
         position: relative;
         top: 75px;
+    }
+}
+
+/*for height<1000px && width<630px*/
+
+@media only screen and (max-height: 1000px) and (max-width: 630px) {
+    .form-header {
+        height: 220px;
+        font: normal normal bold 75px/220px Arial;
     }
 }

@@ -13,7 +13,7 @@ const validateForm = () => {
                     document.getElementById("nameFailed").innerHTML = "Geben Sie bitte Ihren Benutzername ein";
                     document.getElementById("inputText").style.cssText = `
                         border-bottom: 2px solid red;
-                        background-image: url('../img/exclamation.png');
+                        background-image: url('./img/exclamation.png');
                         opacity: 1;
                         background-position: 5px 5px; 
                         padding: 5px 40px;
@@ -24,7 +24,7 @@ const validateForm = () => {
                     document.getElementById("passFailed").innerHTML = "Geben Sie bitte Ihr Passwort ein";
                     document.getElementById("inputPass").style.cssText = `
                         border-bottom: 2px solid red;
-                        background-image: url('../img/exclamation.png');
+                        background-image: url('./img/exclamation.png');
                         opacity: 1;
                         background-position: 5px 5px; 
                         padding: 5px 40px;
