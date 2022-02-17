@@ -15,6 +15,8 @@ const validateForm = () => {
                         border-bottom: 2px solid red;
                         background-image: url('../img/exclamation.png');
                         opacity: 1;
+                        background-position: 5px 5px; 
+                        padding: 5px 40px;
                         `;
                     document.getElementById("inputText").classList.add("input-failed");
                 }
@@ -24,16 +26,15 @@ const validateForm = () => {
                         border-bottom: 2px solid red;
                         background-image: url('../img/exclamation.png');
                         opacity: 1;
+                        background-position: 5px 5px; 
+                        padding: 5px 40px;
                         `;
                     document.getElementById("inputPass").classList.add("input-failed");
-                }
-                if (x == "" && y == "") {
-                    document.querySelector('.form-header').style.height = "260px";
                 }
             }
         )
 
-        /* provisionally , should be removed / edited */
+        /* provisionally , should be removed / edited - Adding Users! */
     }else {
         document.getElementById("formHeader").style.display = "none";
         document.getElementById("formWrong").style.display = "block";

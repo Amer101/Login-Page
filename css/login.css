@@ -1,21 +1,32 @@
+/* height: 1080px && width: 1920px*/
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #555555;
     background-image: linear-gradient(to right, #437995, #62B184);
 }
 
+/*Start Form-Box Style*/
+.form-body {
+    width: 610px;
+    height: 841px;
+    margin: auto;
+    margin-top: 49px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
 .form-header {
     width: 100%;
-    height: 300px;
-    /* height: 100px; */
-    /* margin: 16% 0px; */
-    /* font-size: 3rem; */
+    height: 290px;
     font: normal normal bold 90px/103px Arial;
     color: #555555;
     position: relative;
     top: 100px;
 }
 
+/*If Submit with wrong Username||Password*/
 .form-wrong {
     display: none;
     font-size: 20px;
@@ -27,10 +38,10 @@ body {
 .error-header {
     font: normal normal bold 20px/23px Arial;
     margin-bottom: 20px;
-    /* margin-top: 60px; */
     color: #4469B1;
 }
 
+/*If Submit with empty Input-field*/
 .form-failed {
     margin-top: 5px;
     margin-left: 100px;
@@ -38,23 +49,11 @@ body {
     color: red;
 }
 
-.form-body {
-    width: 610px;
-    height: 841px;
-    margin: auto;
-    /* margin-top: 2%; */
-    margin-top: 49px;
-    text-align: center;
-    background-color: white;
-    /* padding: 20px 0px; */
-    border-radius: 5px;
-    /* box-shadow: 5px 10px 8px 10px #16413f; */
+.input-failed::-webkit-input-placeholder {
+    color: red;
 }
 
-.form-group {
-    margin-bottom: 50px;
-}
-
+/*Input-field styling*/
 input[type=text], input[type=password] {
     width: 349px;
     border: none;  
@@ -68,12 +67,6 @@ input[type=text], input[type=password] {
     background-repeat: no-repeat;
     padding: 10px 40px;
 }
-
-/* .input-text::-webkit-input-placeholder,
-.input-pass::-webkit-input-placeholder  {
-    position: relative;
-    left: 40px;
-} */
 
 input[type=text] {
     background-image: url('../img/user.png');
@@ -89,15 +82,16 @@ input[type=password]:focus {
     opacity: 1;
 }
 
-.input-failed::-webkit-input-placeholder {
-    color: red;
+.form-group {
+    margin-bottom: 50px;
 }
 
+
+/*Customer Checkbox styling*/
 .form-check {
     margin-right: 200px;
     font: normal normal normal 23px/27px Arial;
     color: #555555;
-    /* opacity: 0.8; */
 }
 
 .form-check-container {
@@ -159,13 +153,12 @@ input[type=password]:focus {
     transform: rotate(45deg);
 }
 
+/*Submit-button styling*/
 .btn {
     background: linear-gradient(to right, #437995, #62B184);
     background-color: #62B184;
     color: white;
-    /* padding: 20px; */
     font: normal normal bold 25px/29px Arial;
-    /* font-weight: bold; */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -173,21 +166,16 @@ input[type=password]:focus {
     height: 72px;
     opacity: 0.9;
     margin-bottom: 70px;
-    transition: background 1s linear;
+    transition: background 2s linear;
     transition-timing-function: cubic-bezier(0.42,0,0.58,1);
 }
 
 .btn:hover {
     background: #437995;
-    /* transition: background .3s ease-in-out; */
 }
 
-/* .btn:active {
-    opacity: 0.4;
-} */
-
+/*Links styling*/
 .form-buttom {
-    /* margin-bottom: 50px; */
     font-size: 20px;
     color: #555555;
 }
@@ -198,6 +186,7 @@ input[type=password]:focus {
 
 .form-buttom .link a:link {
     text-decoration: none;
+    color: #555555;
     cursor: pointer;
 }
 
@@ -209,6 +198,7 @@ input[type=password]:focus {
     opacity: 0.8;
 }
 
+/*Logo styling*/
 .footer {
     text-align: center;
 }
@@ -227,42 +217,66 @@ input[type=password]:focus {
     opacity: 0.7;
 }
 
-@media only screen and (max-width: 500px) {  
-    body {
-        font: normal normal normal 16px/19px Arial;
+/*for width<360px*/
+
+@media only screen and (max-width: 630px) {  
+
+    .form-body {
+        width: 510px;
     }
 
     .form-header {
-        font-size: 3.5rem;
+        font: normal normal bold 75px/100px Arial;
     }
 
-    .form-wrong {
-        margin-bottom: 50px;
-    }
-    
-    .error-header {
-        margin-top: 30px;
-    }
-    
     input[type=text], input[type=password] {
-        width: 200px;
+        width: 275px; 
+        font: normal normal normal 20px/23px Arial;
+        background-size:22px;
     }
 
-    /* .form-check {
-        margin-right: 40px;
-    } */
+    .form-check {
+        margin-right: 135px;
+        font: normal normal normal 20px/23px Arial;
+    }
     
+    .form-check-container {
+        margin-left: 35px;
+    }
+
     .btn {
-        width: 300px;
+        font: normal normal bold 22px/25px Arial;
+        width: 360px;
+        height: 62px;
     }
-    
-    .footer-logo {
-        position: relative;
-        top: 50px;
+
+    .form-buttom {
+        font-size: 18px;
     }
-    
+
     .footer-logo img {
-        width: 150px;
-        height: 50px;
+        width: 238px;
+        height: 65px;
+    }
+
+}
+
+/*for height<1000px*/
+
+@media only screen and (max-height: 1000px) {
+    .form-body {
+        height: 761px;
+    }
+    .form-header {
+        height: 220px;
+        top: 55px;
+    }
+    .footer-logo {
+        top: 45px;
+    }
+    .form-wrong {
+        margin-bottom: 150px;
+        position: relative;
+        top: 75px;
     }
 }
