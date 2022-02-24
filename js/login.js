@@ -40,11 +40,9 @@ const validateForm = () => {
         document.getElementById("formWrong").style.display = "block";
         document.getElementById("inputText").style.cssText = `
                 border-bottom: 2px solid #4469B1;
-                opacity: 1;
                 `;
         document.getElementById("inputPass").style.cssText = `
                 border-bottom: 2px solid #4469B1;
-                opacity: 1;
                 `;
         document.querySelector("#nameFailed").style.display = "none";
         document.querySelector("#passFailed").style.display = "none";

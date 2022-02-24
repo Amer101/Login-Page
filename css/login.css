@@ -7,11 +7,15 @@ body {
 }
 
 /*Start Form-Box Style*/
+
 .form-body {
+    position: absolute;
+    right: 0;
+    left: 0;
     width: 610px;
-    height: 841px;
+    height: 80vh;
     margin: auto;
-    margin-top: 49px;
+    margin-top: 4.5vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -19,30 +23,32 @@ body {
 
 .form-header {
     width: 100%;
-    height: 290px;
-    font: normal normal bold 90px/290px Arial;
+    height: 24vh;
+    font: normal normal bold 5.625em/24vh Arial;
     color: #555555;
 }
 
 /*If Submit with wrong Username||Password*/
+
 .form-wrong {
     display: none;
     font-size: 20px;
-    margin-bottom: 190px;
+    margin-bottom: 15vh;
     position: relative;
-    top: 100px;
+    top: 6.25vh;
 }
 
 .error-header {
-    font: normal normal bold 20px/23px Arial;
-    margin-bottom: 20px;
+    font: normal normal bold 20px/2.3vh Arial;
+    margin-bottom: 2vh;
     color: #4469B1;
 }
 
 /*If Submit with empty Input-field*/
+
 .form-failed {
     margin-top: 5px;
-    margin-left: 100px;
+    margin-left: 10px;
     text-align: left;
     color: red;
 }
@@ -52,18 +58,21 @@ body {
 }
 
 /*Input-field styling*/
+.form {
+    display: inline-block;
+}
+
 input[type=text], input[type=password] {
     width: 349px;
     border: none;  
     background-color: white;
     border-bottom: 2px solid #808080;
-    font: normal normal normal 23px/27px Arial;
+    font: normal normal normal 23px/2.7vh Arial;
     opacity: 0.6;
-    color: #B4B4B4;
     background-size:25px;
     background-position: 5px 10px; 
     background-repeat: no-repeat;
-    padding: 10px 40px;
+    padding: 1vh 40px;
 }
 
 input[type=text] {
@@ -81,14 +90,15 @@ input[type=password]:focus {
 }
 
 .form-group {
-    margin-bottom: 50px;
+    margin-bottom: 5vh;
 }
 
 
 /*Customer Checkbox styling*/
+
 .form-check {
-    margin-right: 200px;
-    font: normal normal normal 23px/27px Arial;
+    float: left;
+    font: normal normal normal 23px/2.7vh Arial;
     color: #555555;
 }
 
@@ -96,7 +106,7 @@ input[type=password]:focus {
     display: block;
     position: relative;
     margin-left: 50px;
-    margin-bottom: 12px;
+    margin-bottom: 5vh;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -115,7 +125,7 @@ input[type=password]:focus {
 .checkmark {
     position: absolute;
     top: 0;
-    left: 45px;
+    left: -45px;
     height: 25px;
     width: 25px;
     background-color: #eee;
@@ -153,23 +163,28 @@ input[type=password]:focus {
 
 /*Submit-button styling*/
 .btn {
-    background: linear-gradient(to right, #437995, #62B184);
-    background-color: #62B184;
+    background: linear-gradient(to right, #437995 55%, #62B184 70%);
     color: white;
-    font: normal normal bold 25px/29px Arial;
+    font: normal normal bold 25px/2.9vh Arial;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 429px;
-    height: 72px;
+    width: 16.5em;
+    box-sizing: content-box;
+    height: 7vh;
     opacity: 0.9;
-    margin-bottom: 70px;
+    margin-bottom: 7vh;
+    background-size: 200%;
+    background-position: right;
     transition: background 2s linear;
-    transition-timing-function: cubic-bezier(0.42,0,0.58,1);
+}
+
+#btn {
+    transition-timing-function: ease-in;
 }
 
 .btn:hover {
-    background: #437995;
+    background-position: left;
 }
 
 /*Links styling*/
@@ -179,7 +194,7 @@ input[type=password]:focus {
 }
 
 .link {
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 
 .form-buttom .link a:link {
@@ -196,58 +211,99 @@ input[type=password]:focus {
     opacity: 0.8;
 }
 
-/*Logo styling*/
 .footer {
     text-align: center;
-}
-
-.footer-logo {
-    position: relative;
-    top: 90px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .footer-logo img {
     width: 248px;
-    height: 75px;
+    height: 7vh;
 }
 
 .footer-logo img:hover {
     opacity: 0.7;
 }
 
-/*for width<630px*/
+/*for height<950px and height>630px*/
 
-@media only screen and (max-width: 630px) {  
+@media only screen and (max-height: 950px) and (min-width:630px) {
+    .form-body {
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 540px;
+    }
+    .form-header {
+        font: normal normal bold 5em/220px Arial;
+    }
+    input[type=text], input[type=password] {
+        width: 300px; 
+        font: normal normal normal 20px/23px Arial;
+        background-size:22px;
+    }
+    .form-check {
+        font: normal normal normal 20px/23px Arial;
+    }
+    .btn {
+        font: normal normal bold 20px/23px Arial;
+        width: 380px;
+        height: 60px;
+    }
+    .form-buttom {
+        font-size: 18px;
+    }
+    .footer-logo img {
+        width: 238px;
+        height: 60px;
+    }
+}
+
+/* for width<630px or height<850px*/
+
+@media only screen and (max-width: 630px), (max-height: 850px) {  
 
     .form-body {
+        position: absolute;
+        right: 0;
+        left: 0;
         width: 510px;
+        height: 640px;
     }
-
     .form-header {
+        height: 180px;
         font: normal normal bold 75px/220px Arial;
     }
-
     input[type=text], input[type=password] {
+        padding: 10px 40px;
         width: 275px; 
         font: normal normal normal 20px/23px Arial;
         background-size:22px;
     }
 
+    .form-wrong {
+        margin-bottom: 100px;
+        position: relative;
+        top: 50px;
+    }
+    .form-check-container {
+        margin-bottom: 50px;
+    }
     .form-check {
-        margin-right: 135px;
         font: normal normal normal 20px/23px Arial;
     }
-    
-    .form-check-container {
-        margin-left: 35px;
+    .form-group {
+        margin-bottom: 40px;
     }
-
     .btn {
+        margin-bottom: 50px;
         font: normal normal bold 22px/25px Arial;
         width: 360px;
-        height: 62px;
+        height: 60px;
     }
-
     .form-buttom {
         font-size: 18px;
     }
@@ -256,34 +312,10 @@ input[type=password]:focus {
         width: 238px;
         height: 65px;
     }
-
-}
-
-/*for height<1000px*/
-
-@media only screen and (max-height: 1000px) {
-    .form-body {
-        height: 761px;
-    }
-    .form-header {
-        height: 220px;
-        font: normal normal bold 90px/220px Arial;
-    }
-    .footer-logo {
-        top: 45px;
-    }
-    .form-wrong {
-        margin-bottom: 150px;
-        position: relative;
-        top: 75px;
-    }
-}
-
-/*for height<1000px && width<630px*/
-
-@media only screen and (max-height: 1000px) and (max-width: 630px) {
-    .form-header {
-        height: 220px;
-        font: normal normal bold 75px/220px Arial;
+    .footer {
+        position:relative;
+        top: 700px;
+        right: 0;
+        left: 0;
     }
 }
