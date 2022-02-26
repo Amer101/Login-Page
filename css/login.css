@@ -319,3 +319,40 @@ input[type=password]:focus {
         left: 0;
     }
 }
+
+/* for Mobile */
+
+@media only screen and (max-width: 500px) {  
+
+    .form-body {
+        width: 410px;
+    }
+    .form-header {
+        font: normal normal bold 60px/220px Arial;
+    }
+    input[type=text], input[type=password] {
+        width: 205px; 
+        font: normal normal normal 18px/21px Arial;
+        background-size:19px;
+    }
+
+    .form-wrong {
+        font-size: 17px;
+    }
+    .form-check {
+        font: normal normal normal 18px/21px Arial;
+    }
+    .btn {
+        font: normal normal bold 18px/21px Arial;
+        width: 290px;
+        height: 50px;
+    }
+    .form-buttom {
+        font-size: 17px;
+    }
+
+    .footer-logo img {
+        width: 200px;
+        height: 55px;
+    }
+}
